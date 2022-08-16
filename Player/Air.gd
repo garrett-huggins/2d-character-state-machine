@@ -44,4 +44,5 @@ func jump():
 
 
 func _on_CoyoteTimer_timeout():
-	player.jumps_available = 1
+	if not player.is_on_floor():
+		player.jumps_available = 1
